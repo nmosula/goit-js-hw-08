@@ -24,11 +24,9 @@ function onSubmit(evt) {
 
     const returnFormElements = {};
 
-    const frmElements = evt.currentTarget.elements;
+    returnFormElements[frmEmail.name] = frmEmail.value;
+    returnFormElements[frmMessage.name] = frmMessage.value;
 
-    for (const el of frmElements) {
-        returnFormElements[el.name] = el.value
-    }
     console.log(returnFormElements);
 
     frm.reset();
